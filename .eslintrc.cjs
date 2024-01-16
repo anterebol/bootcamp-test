@@ -30,8 +30,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'prettier'],
   rules: {
-    'react/react-in-jsx-scope': false,
-    'import/prefer-default-export': false,
-    'react/function-component-definition': false,
+    'react/react-in-jsx-scope': 0,
+    'import/prefer-default-export': 0,
+    'react/function-component-definition': 0,
   },
 };
