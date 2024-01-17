@@ -3,29 +3,33 @@
   background: white;
   border-radius: 5px;
   padding-bottom: 30px;
-  font-size: 14px;
+  font-size: 16px;
   cursor: pointer;
+  transition: ease .4s;
+  &:hover {
+    box-shadow: 2px 2px 10px 0px black;
+  }
   &__img {
     width: 80%;
     margin: 0 auto;
-    transition: ease 1s;
     img {
       position: relative;
       top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
       border-radius: 10px;
       max-width: 100%;
       max-height: 100%;
       box-shadow: 0px 7px 20px 0px rgb(70, 70, 70);
+      transition: ease .5s;
     }
   }
   &__name {
     font-weight: bold;
     text-align: center;
   }
-  :hover > &__img {
-    transform: scale(1.1);
-  }
 }
+
 @media (max-width: 670px) {
   .character-card {
     width: 44%;
