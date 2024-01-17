@@ -1,14 +1,20 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import { URL } from '../../constants/url';
+import { CharacterResponseType } from '../../types/characterResponseType';
 
-export const getCharacters = createAsyncThunk('gedCharacters', 
-  async (page: string | number) => {
-    const data = await fetch(`https://rickandmortyapi.com/api/character/?count=20&page=${page}`);
-    if (!data.ok) {
-      throw new Error('Something went wrong');
-    } else {
-      const {info, results} = await data.json();
-      const res = {pages: info.pages, data: results}
-      return res;
+export const getCharacters = createAsyncThunk(
+  'gedCharacters',
+  async (page: number, { rejectWithValue }) => {
+    const res = await fetch(`${URL}?page=${page}`);
+
+    if (!res.ok) {
+      return rejectWithValue('Something went wrong');
     }
+
+    const { info, results } = (await res.json()) as CharacterResponseType;
+
+    const data = { pages: info.pages, characters: results };
+
+    return data;
   }
-)
+);
