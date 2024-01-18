@@ -4,6 +4,7 @@
   margin: 0 auto;
   gap: 10px;
   justify-content: center;
+  align-self: flex-end;
   &__points {
     display: grid;
     align-items: end;

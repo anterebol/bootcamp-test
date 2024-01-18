@@ -36,14 +36,11 @@
       margin: 15px auto 0 auto;
       z-index: 5;
       font-size: 14px;
-      // gap: 10px;
       display: flex;
       flex-wrap: wrap;
       &-item {
         margin: 10px;
       }
-      // grid-template-columns: repeat(2, 1fr);
-      // grid-template-rows: repeat(3, minmax(30px, 50px));
     }
   }
 }

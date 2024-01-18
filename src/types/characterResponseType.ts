@@ -1,4 +1,4 @@
-import { CharacterType } from "./characterType";
+import { CharacterType } from './characterType';
 
 export type CharacterResponseType = {
   info: { pages: number };

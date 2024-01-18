@@ -33,5 +33,9 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'import/prefer-default-export': 0,
     'react/function-component-definition': 0,
+    'react/no-unused-prop-types': 'warn',
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-noninteractive-element-interactions': 0,
+    'react-hooks/exhaustive-deps': 0,
   },
 };
