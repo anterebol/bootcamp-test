@@ -4,6 +4,7 @@ import settingIcon from '../../assets/setting.svg';
 import { Settings } from './Settings/Settings';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { toggleSettings } from '../../store/appReducer/appReducer';
+import github from '../../assets/github.svg';
 
 export const Header = () => {
   const dispatch = useAppDispatch();
@@ -17,8 +18,16 @@ export const Header = () => {
         />
       </div>
       <div className="control-elements">
+        <a
+          target="_blank"
+          className="control-elements__button"
+          href="https://github.com/anterebol/bootcamp-test"
+          rel="noreferrer"
+        >
+          <img src={github} alt="github-img" />
+        </a>
         <Button
-          cls={['button__settings']}
+          cls={['control-elements__button', 'settings-icon']}
           callback={() => {
             dispatch(toggleSettings(!settingsOpened));
           }}
