@@ -1,0 +1,26 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: ease .5s;
+  &.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: .7;
+    z-index: 2;
+    cursor: pointer;
+  }
+}

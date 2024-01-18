@@ -1,3 +1,53 @@
-h1 {
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  background: gainsboro;
+  -webkit-user-select: none;
+}
+// #root {
+//   width: 100%;
+//   height: 100%;
+// }
+::-webkit-scrollbar {
+  width: 10px;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(183, 181, 180);
+  border-radius: 20px;
+  border: none;
+}
+body::-webkit-scrollbar-track {
+  background: rgb(247, 248, 248);
+}
+li {
+  list-style: none;
+}
+button {
+  background: none;
+  cursor: pointer;
+}
+.main {
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  padding-top: 80px;
+  display: grid;
+  min-height: 100vh;
+}
+.top-button {
+  border-radius: 50%;
   background: orange;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  padding: 10px;
+  img {
+    width: 25px;
+    height: 25px;
+  }
 }

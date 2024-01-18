@@ -1,30 +1,21 @@
-# React + TypeScript + Vite
+# IT Bootcamp
+Тестовый проект для IT Bootcamp.
+Все базовые требования выполнены:
++ Используя API (https://rickandmortyapi.com/documentation/#rest) необходимо построить список персонажей в виде списка карточек “аватар + имя” (**Выполнено**)
+![Скриншот-18-01-2024 19_48_41](https://github.com/anterebol/bootcamp-test/assets/71256929/0220dc9a-81c8-4f19-9039-ed2469f40fca)
++ По клику на карточку показывать модальное окно с полной информацией о персонаже (имя, пол, статус, раса, вид и в каком эпизоде появился впервые) (**Выполнено**)
+![Скриншот-18-01-2024 19_51_57](https://github.com/anterebol/bootcamp-test/assets/71256929/adfa41cd-e01b-49ea-a781-048274ca2ac2)
++ Верстка адаптивная (**Выполнено**)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![DkT7yCQL](https://github.com/anterebol/bootcamp-test/assets/71256929/9ef4ca40-80ab-4a98-91cd-6e9a880eaf70)
++ При первой отрисовке показываем только первых 20 персонажей, но при прокрутке вниз необходимо реализовать бесконечную загрузку (каждый раз добавлять по 20 персонажей) (**Выполнено**)
 
-Currently, two official plugins are available:
+Опциональные:
++ добавить ссылку “to top” c анимацией прокрутки к началу страницы (**Выполнено**)
++ использовать анимированные лоадеры при загрузке данных (**Выполнено**)
++ добавить переключатель на изменение бесконечной подгрузки данных на вид с использованием пагинации (в API имеется реализация для этого https://rickandmortyapi.com/documentation/#info-and-pagination) (**Выполнено**)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+![Скриншот-18-01-2024 19_48_41 (2)](https://github.com/anterebol/bootcamp-test/assets/71256929/d8a80a10-2ce5-47e5-9938-baa069804ec1)
++ для стилизации использовать SCSS (**Выполнено**)
++ можно использовать любой javaScript фреймворк/библиотеку для реализации (предпочтительно React) (**Выполнено - React**)
++ прислать ссылку на рабочий проект (github pages, surge.sh, vercel или любой другой хостинг) (**Выполнено**)
