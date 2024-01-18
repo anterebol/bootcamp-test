@@ -1,7 +1,18 @@
 .list-characters {
   display: flex;
-  margin: 50px auto;
+  margin: 20px auto;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px 3%;
+}
+.preloader {
+  height: 100px;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 80px;
+    height: 80px;
+  }
 }
