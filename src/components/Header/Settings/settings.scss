@@ -1,0 +1,41 @@
+.settings {
+  position: absolute;
+  right: 0px;
+  top: 61px;
+  height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: ease .5s;
+  &.open {
+    height: 40px;
+  }
+  & > li {
+    border-bottom: 2px solid white;
+  }
+  li:last-child {
+    border: none;
+  }
+  &__item {
+    position: relative;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &-cover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background: rgb(10, 82, 170);
+      border-radius: 5px;
+      transition: ease .5s;
+    }
+    &:hover > &-cover {
+      opacity: .6;
+    }
+  }
+}

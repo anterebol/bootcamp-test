@@ -1,0 +1,32 @@
+.header {
+  top: 0;
+  box-sizing: border-box;
+  position: fixed;
+  height: 60px;
+  background: linear-gradient(to right, rgb(0, 115, 255), rgb(10, 82, 170));
+  z-index: 1;
+  width: 100%;
+  display: flex;;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    width: 150px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .button__settings {
+    width: 30px;
+    height: 30px;
+    transition: ease 1s;
+    &:hover {
+      transform: rotate(180deg);
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

@@ -9,7 +9,8 @@ const initialState = {
   loading: false,
   currentCharacterId: null as string | null,
   openedPopup: false,
-  pages: 1,
+  pages: 0,
+  settingsOpened: false,
   isPagination: false,
 };
 
@@ -29,6 +30,9 @@ export const appSlice = createSlice({
     },
     closePopup: (state) => {
       state.openedPopup = false;
+    },
+    toggleSettings: (state, action) => {
+      state.settingsOpened = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -54,5 +58,10 @@ export const appSlice = createSlice({
   },
 });
 export default appSlice.reducer;
-export const { setPage, togglePagination, openCharacterPopup, closePopup } =
-  appSlice.actions;
+export const {
+  setPage,
+  togglePagination,
+  openCharacterPopup,
+  closePopup,
+  toggleSettings,
+} = appSlice.actions;
