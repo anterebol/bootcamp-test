@@ -19,10 +19,17 @@ export const appSlice = createSlice({
   initialState: { ...initialState },
   reducers: {
     setPage: (state, action) => {
-      state.currentPage = action.payload;
+      if (action.payload <= state.pages && action.payload > 0) {
+        state.currentPage = action.payload;
+      }
     },
     togglePagination: (state) => {
-      state.isPagination = !state.isPagination;
+      if (state.isPagination) {
+        state.isPagination = !state.isPagination;
+        state.currentPage = 1;
+      } else {
+        state.isPagination = !state.isPagination;
+      }
     },
     openCharacterPopup: (state, action) => {
       state.currentCharacterId = action.payload;
@@ -42,18 +49,16 @@ export const appSlice = createSlice({
       })
       .addCase(getCharacters.fulfilled, (state, action) => {
         const { pages, characters } = action.payload || [];
-        if (state.isPagination) {
+        if (state.isPagination || state.currentPage === 1) {
           state.characters = [...characters];
         } else {
-          state.characters = [
-            ...state.characters,
-            ...characters,
-          ] as CharacterType[];
+          state.characters.push(...characters);
         }
         state.pages = pages;
+        state.loading = false;
       })
       .addCase(getCharacters.rejected, (state) => {
-        state.loading = true;
+        state.loading = false;
       });
   },
 });
